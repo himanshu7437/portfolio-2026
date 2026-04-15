@@ -2,31 +2,18 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import type { StoryStep } from "@/lib/markdown";
 
-const storySteps = [
-  {
-    year: "Phase 1",
-    title: "Curiosity",
-    description: "Started as a curious developer exploring how things work.",
-  },
-  {
-    year: "Phase 2",
-    title: "Real-world transition",
-    description: "Moved beyond tutorials to building real-world applications.",
-  },
-  {
-    year: "Phase 3",
-    title: "Problem Solving",
-    description: "Focused on solving real problems with scalable solutions.",
-  },
-  {
-    year: "Present",
-    title: "Product Engineering",
-    description: "Now building products that users actually interact with.",
-  },
-];
+export function StoryJourney({ steps }: { steps: StoryStep[] }) {
+  // Fallback if no steps provided
+  const displaySteps = steps?.length > 0 ? steps : [
+    {
+      year: "Present",
+      title: "Loading...",
+      description: "Getting story from markdown...",
+    }
+  ];
 
-export function StoryJourney() {
   return (
     <section id="story" className="py-32 px-4 relative">
       <div className="max-w-4xl mx-auto">
@@ -44,7 +31,7 @@ export function StoryJourney() {
         </motion.div>
 
         <div className="relative border-l border-white/10 ml-4 md:ml-1/2">
-          {storySteps.map((step, index) => (
+          {displaySteps.map((step, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -50 }}
