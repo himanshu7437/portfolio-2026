@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { GithubIcon } from "@/components/Icons";
 import type { ProjectData } from "@/lib/markdown";
+import { cubicBezier } from "framer-motion";
 
 /* ─── Enriched project metadata for the grid cards ─── */
 const projectMeta: Record<
@@ -67,7 +68,7 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.7, ease: cubicBezier(0.22, 1, 0.36, 1) },
   },
 };
 
@@ -285,7 +286,7 @@ function CaseStudyModal({
         initial={{ opacity: 0, scale: 0.92, y: 30 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.92, y: 30 }}
-        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.4, ease: cubicBezier(0.22, 1, 0.36, 1) }}
         onClick={(e) => e.stopPropagation()}
         onWheel={(e) => e.stopPropagation()}
         onTouchMove={(e) => e.stopPropagation()}
@@ -411,7 +412,7 @@ export function Projects({ projects }: { projects: ProjectData[] }) {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.8, ease: cubicBezier(0.22, 1, 0.36, 1) }}
             className="text-center mb-16 md:mb-20"
           >
             <p className="text-xs uppercase tracking-[0.4em] text-primary mb-5 font-mono">
