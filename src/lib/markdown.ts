@@ -2,8 +2,8 @@ import fs from "fs";
 import path from "path";
 
 // Resolves to the parent directory of the Next.js project
-const dataDir = path.join(process.cwd(), "..");
-
+const dataDir = path.join(process.cwd(), "src/data");
+console.log("Reading from:", dataDir);
 export interface StoryStep {
   year: string;
   title: string;
@@ -26,7 +26,7 @@ export function getStorySteps(): StoryStep[] {
     .filter(l => l.length > 0 && !l.startsWith("#"));
 
   const titles = ["Curiosity", "Real-world transition", "Problem Solving", "Product Engineering"];
-  
+
   return lines.map((desc, index) => {
     return {
       year: index === lines.length - 1 ? "Present" : `Phase ${index + 1}`,
@@ -56,10 +56,10 @@ export function getProjects(): ProjectData[] {
 
   // Split by markdown horizontal rule
   const blocks = fileContents.split("---").map(b => b.trim()).filter(b => b.length > 0);
-  
+
   return blocks.map(block => {
     const titleMatch = block.match(/##\s+(.*)/);
-    const problemMatch = block.match(/Problem:\s*\n(.*)/);
+    const problemMatch = block.match(/Problem:\s*\n([\s\S]*?)(?=\n[A-Z]|$)/);
     const solutionMatch = block.match(/Solution:\s*\n(.*)/);
     const techMatch = block.match(/Tech:\s*\n(.*)/);
     const impactMatch = block.match(/Impact:\s*\n(.*)/);
