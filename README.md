@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="public/Preview.png" alt="Portfolio Preview" />
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js" />
   <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
   <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
@@ -14,7 +18,7 @@
 </p>
 
 <p align="center">
-  A cinematic, scroll-driven portfolio built with Next.js 16, featuring buttery-smooth Lenis scrolling, GSAP-powered transitions, Framer Motion orchestrations, and a dark glassmorphic design language.
+  A cinematic, scroll-driven portfolio built with Next.js 16, featuring buttery-smooth Lenis scrolling, GSAP-powered transitions, featuring smooth animations, scroll interactions, and a modern glassmorphic UI
 </p>
 
 ---
@@ -103,7 +107,7 @@ portfolio/
 
 ```bash
 # 1 — Clone the repo
-git clone https://github.com/himanshu7437/portfolio.git
+git clone https://github.com/himanshu7437/portfolio-2026
 cd portfolio
 
 # 2 — Install dependencies
@@ -209,6 +213,12 @@ npx vercel
 ```
 
 > **Note**: Since `markdown.ts` reads data from the parent directory at build time (`../*.md`), make sure your deployment environment includes these files or adjust the `dataDir` path in `src/lib/markdown.ts`.
+
+---
+
+## 🙌 Feedback
+
+If you have any feedback, suggestions, or just want to connect — feel free to reach out!
 
 ---
 
