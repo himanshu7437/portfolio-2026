@@ -70,7 +70,7 @@ export function ClosingCTA() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="mailto:hello@himanshu.dev"
+            href="mailto:himanshujangra368@gmail.com"
             className="group inline-flex items-center gap-3 px-10 py-5 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold text-lg hover:shadow-[0_0_50px_rgba(96,165,250,0.4)] hover:scale-105 transition-all duration-300"
           >
             <Mail className="w-5 h-5" />
@@ -78,7 +78,7 @@ export function ClosingCTA() {
           </a>
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/himanshusharma"
+              href="https://github.com/himanshu7437"
               target="_blank"
               rel="noreferrer"
               className="p-4 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-white/30 hover:scale-110 transition-all duration-300"
@@ -86,7 +86,7 @@ export function ClosingCTA() {
               <GithubIcon className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/himanshusharma"
+              href="https://linkedin.com/in/himanshu7437"
               target="_blank"
               rel="noreferrer"
               className="p-4 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-white/30 hover:scale-110 transition-all duration-300"
